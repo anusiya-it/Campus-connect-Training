@@ -1,0 +1,99 @@
+{
+  "name": "Anusiya G",
+  "role_target": "Trainee Developer / Consultant",
+  "contact": {
+    "email": "Anusiya.it@gmail.com",
+    "linkedin": "linkedin.com/in/anusiya-g",
+    "github": "github.com/anusiya-it"
+  },
+  "professional_summary": "B.Tech IT student with a strong interest in software development and emerging technologies. Possess basic programming knowledge and good communication skills, with a willingness to learn and adapt. A quick learner and team player, eager to contribute to real-world projects and grow as a Trainee Developer/Consultant.",
+  "education": [
+    {
+      "institution": "Hindustan College of Technology",
+      "location": "Salem, Tamil Nadu",
+      "degree": "Bachelor of Technology in Information Technology",
+      "score": "CGPA: 8.5",
+      "duration": "2023 – 2027"
+    },
+    {
+      "institution": "St. Mary's Girls Higher Secondary School",
+      "location": "Salem, Tamil Nadu",
+      "degree": "Higher Secondary Education (HSE)",
+      "score": "75%",
+      "duration": "2023"
+    },
+    {
+      "institution": "St. Mary's Girls Higher Secondary School",
+      "location": "Salem, Tamil Nadu",
+      "degree": "Secondary School Leaving Certificate (SSLC)",
+      "score": null,
+      "duration": "2021"
+    }
+  ],
+  "technical_skills": {
+    "programming_languages": ["Python", "SQL", "C"],
+    "frontend_development": ["React.js", "HTML5", "CSS3", "Responsive Web Design"],
+    "backend_development": ["Python (Django)", "Python (Flask)", "Node.js", "Express.js", "FastAPI"],
+    "databases_and_cloud": ["SQL", "MongoDB", "Supabase", "Firebase"],
+    "tools_and_frameworks": ["Git", "GitHub", "VS Code", "Postman"]
+  },
+  "projects": [
+    {
+      "title": "Bank Management System",
+      "stack": ["Python", "React", "SQL", "Flask"],
+      "highlights": [
+        "Developed a secure full-stack banking interface enabling user account registration, real-time balance tracking, and transaction history logging.",
+        "Implemented secure backend validation for customer transactions and integrated SQL database schemas to handle ACID-compliant financial operations."
+      ]
+    },
+    {
+      "title": "Smart Recruitment Enterprise Platform",
+      "stack": ["React", "Firebase", "Supabase", "React Router"],
+      "highlights": [
+        "Developed a production-grade interface featuring a secure glassmorphic authentication gateway using Firebase Auth.",
+        "Built a responsive UI with dynamic React Router pathing and a multi-language fallback matrix supporting English, French, Hindi, and Tamil."
+      ]
+    },
+    {
+      "title": "Smart Veterinary Management System",
+      "stack": ["React", "FastAPI", "Supabase", "Python", "OpenCV"],
+      "highlights": [
+        "Developed a healthcare platform enabling real-time animal patient check-ins and live database synchronization.",
+        "Structured secure cross-role cloud security profiles using Row-Level Security (RLS) in Supabase to enforce data isolation."
+      ]
+    },
+    {
+      "title": "Government Land Records Encroachment Monitoring",
+      "stack": ["GIS Tools", "Python", "Satellite Imagery"],
+      "highlights": [
+        "Developed a GIS-based land record management system designed to detect unauthorized property encroachments.",
+        "Integrated automated workflow alerts to cross-reference boundary data with official government registry datasets."
+      ]
+    }
+  ],
+  "internship_experience": [
+    {
+      "company": "Trinax",
+      "role": "Full Stack Web Development Intern",
+      "location": "Remote",
+      "duration": "July 2026",
+      "highlights": [
+        "Gained hands-on experience in building scalable web applications using React.js for modern frontends and Python for robust server logic.",
+        "Collaborated on designing RESTful APIs, integrating database models, and optimizing client-side performance for business components."
+      ]
+    }
+  ],
+  "certificates": [
+    { "name": "IBM Data Fundamentals Certification", "issuer": "IBM", "date": "July 2026" },
+    { "name": "UI/UX Design Certification", "issuer": "Novi Tech", "date": "Aug 2025" },
+    { "name": "Dr. Kalam Young Achiever Award", "issuer": "Participant Recognition", "date": "Sep 2025" },
+    { "name": "Python Core & Full-Stack Web Development Using Python", "issuer": "Infosys Springboard", "date": "2024" },
+    { "name": "JavaScript Bootcamp Certificate", "issuer": "LetsGarde", "date": "May 2024" }
+  ],
+  "languages": [
+    { "name": "Tamil", "proficiency": "Native" },
+    { "name": "English", "proficiency": "Professional" },
+    { "name": "Telugu", "proficiency": "Conversational" }
+  ],
+  "declaration": "I hereby declare that all the information provided above is true, complete, and correct to the best of my knowledge and belief."
+}

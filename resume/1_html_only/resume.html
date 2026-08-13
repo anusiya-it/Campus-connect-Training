@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anusiya G — Resume</title>
+<style>
+  :root{
+    --ink:#1c2321;
+    --paper:#f6f5f1;
+    --panel:#ffffff;
+    --line:#dcd9d0;
+    --accent:#2f6f5e;
+    --accent-soft:#e4efe9;
+    --mono-tag:#8a8478;
+    --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+    --sans: "Inter", "Segoe UI", Arial, sans-serif;
+    --mono: "IBM Plex Mono", "Courier New", monospace;
+  }
+
+  *{box-sizing:border-box;}
+
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .sheet{
+    max-width:850px;
+    margin:40px auto;
+    background:var(--panel);
+    border:1px solid var(--line);
+    padding:56px 60px;
+  }
+
+  header.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    border-bottom:3px solid var(--ink);
+    padding-bottom:20px;
+    margin-bottom:28px;
+    gap:24px;
+    flex-wrap:wrap;
+  }
+
+  h1{
+    font-family:var(--serif);
+    font-size:44px;
+    font-weight:600;
+    margin:0 0 6px 0;
+    letter-spacing:-0.01em;
+  }
+
+  .role-tag{
+    font-family:var(--mono);
+    font-size:12.5px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--accent);
+    background:var(--accent-soft);
+    display:inline-block;
+    padding:4px 10px;
+    border-radius:2px;
+  }
+
+  .contact-block{
+    text-align:right;
+    font-family:var(--mono);
+    font-size:12.5px;
+    color:var(--mono-tag);
+    line-height:1.8;
+  }
+  .contact-block a{color:var(--ink); text-decoration:none; border-bottom:1px solid var(--line);}
+  .contact-block a:hover{border-color:var(--accent); color:var(--accent);}
+
+  section{margin-bottom:30px;}
+
+  .sec-title{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin:0 0 14px 0;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .sec-title::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:var(--line);
+  }
+
+  .summary{
+    font-size:15px;
+    color:#3a3f3c;
+    max-width:70ch;
+  }
+
+  .edu-item, .job-item{
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:4px 16px;
+    margin-bottom:14px;
+  }
+  .edu-item:last-child, .job-item:last-child{margin-bottom:0;}
+  .inst{font-weight:600; font-size:15px;}
+  .degree{font-size:13.5px; color:#4b504d;}
+  .loc-date{
+    font-family:var(--mono);
+    font-size:11.5px;
+    color:var(--mono-tag);
+    text-align:right;
+    white-space:nowrap;
+    padding-top:2px;
+  }
+  .cgpa{
+    font-family:var(--mono);
+    font-size:11.5px;
+    color:var(--accent);
+  }
+
+  .skills-grid{
+    display:grid;
+    grid-template-columns:150px 1fr;
+    row-gap:10px;
+    column-gap:16px;
+    font-size:13.5px;
+  }
+  .skills-grid dt{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    color:var(--mono-tag);
+    padding-top:2px;
+  }
+  .skills-grid dd{margin:0; color:#2a2f2d;}
+
+  .project{
+    border-left:2px solid var(--line);
+    padding-left:16px;
+    margin-bottom:20px;
+  }
+  .project:last-child{margin-bottom:0;}
+  .project-title{
+    font-weight:600;
+    font-size:15px;
+    margin-bottom:2px;
+  }
+  .project-stack{
+    font-family:var(--mono);
+    font-size:11px;
+    color:var(--accent);
+    margin-bottom:6px;
+    display:block;
+  }
+  .project ul{
+    margin:0;
+    padding-left:18px;
+    font-size:13.5px;
+    color:#3a3f3c;
+  }
+  .project li{margin-bottom:3px;}
+
+  .cert-list{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px 24px;
+    font-size:13.5px;
+  }
+  .cert-list li{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    border-bottom:1px dotted var(--line);
+    padding-bottom:6px;
+  }
+  .cert-list .cert-date{
+    font-family:var(--mono);
+    font-size:11px;
+    color:var(--mono-tag);
+    white-space:nowrap;
+  }
+
+  .lang-row{
+    display:flex;
+    gap:22px;
+    font-size:13.5px;
+    flex-wrap:wrap;
+  }
+  .lang-row span b{font-weight:600;}
+  .lang-row .level{
+    font-family:var(--mono);
+    font-size:11px;
+    color:var(--mono-tag);
+  }
+
+  footer.decl{
+    margin-top:36px;
+    padding-top:16px;
+    border-top:1px solid var(--line);
+    font-size:11.5px;
+    color:var(--mono-tag);
+    font-style:italic;
+  }
+
+  @media print{
+    body{background:#fff;}
+    .sheet{border:none; margin:0; padding:24px;}
+  }
+
+  @media (max-width:640px){
+    .sheet{padding:28px 22px;}
+    h1{font-size:32px;}
+    header.hero{flex-direction:column; align-items:flex-start;}
+    .contact-block{text-align:left;}
+    .edu-item, .job-item{grid-template-columns:1fr;}
+    .loc-date{text-align:left;}
+    .skills-grid{grid-template-columns:1fr;}
+    .cert-list{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="hero">
+    <div>
+      <h1>Anusiya G</h1>
+      <span class="role-tag">Trainee Developer / Consultant</span>
+    </div>
+    <div class="contact-block">
+      <div><a href="mailto:Anusiya.it@gmail.com">Anusiya.it@gmail.com</a></div>
+      <div><a href="https://linkedin.com/in/anusiya-g" target="_blank" rel="noopener">linkedin.com/in/anusiya-g</a></div>
+      <div><a href="https://github.com/anusiya-it" target="_blank" rel="noopener">github.com/anusiya-it</a></div>
+    </div>
+  </header>
+
+  <section>
+    <p class="summary">B.Tech IT student with a strong interest in software development and emerging technologies. Possesses basic programming knowledge and good communication skills, with a willingness to learn and adapt. A quick learner and team player, eager to contribute to real-world projects and grow as a Trainee Developer/Consultant.</p>
+  </section>
+
+  <section>
+    <h2 class="sec-title">Education</h2>
+    <div class="edu-item">
+      <div>
+        <div class="inst">Hindustan College of Technology</div>
+        <div class="degree">Bachelor of Technology in Information Technology &nbsp;·&nbsp; <span class="cgpa">CGPA 8.5</span></div>
+      </div>
+      <div class="loc-date">Salem, Tamil Nadu<br>2023 – 2027</div>
+    </div>
+    <div class="edu-item">
+      <div>
+        <div class="inst">St. Mary's Girls Higher Secondary School</div>
+        <div class="degree">Higher Secondary Education (HSE) &nbsp;·&nbsp; <span class="cgpa">Score 75%</span></div>
+      </div>
+      <div class="loc-date">Salem, Tamil Nadu<br>2023</div>
+    </div>
+    <div class="edu-item">
+      <div>
+        <div class="inst">St. Mary's Girls Higher Secondary School</div>
+        <div class="degree">Secondary School Leaving Certificate (SSLC)</div>
+      </div>
+      <div class="loc-date">Salem, Tamil Nadu<br>2021</div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec-title">Technical Skills</h2>
+    <dl class="skills-grid">
+      <dt>Languages</dt><dd>Python, SQL, C</dd>
+      <dt>Frontend</dt><dd>React.js, HTML5, CSS3, Responsive Web Design</dd>
+      <dt>Backend</dt><dd>Python (Django, Flask), Node.js, Express.js, FastAPI</dd>
+      <dt>Databases &amp; Cloud</dt><dd>SQL, MongoDB, Supabase, Firebase</dd>
+      <dt>Tools</dt><dd>Git, GitHub, VS Code, Postman</dd>
+    </dl>
+  </section>
+
+  <section>
+    <h2 class="sec-title">Projects</h2>
+
+    <div class="project">
+      <div class="project-title">Bank Management System</div>
+      <span class="project-stack">Python · React · SQL · Flask</span>
+      <ul>
+        <li>Developed a secure full-stack banking interface enabling user account registration, real-time balance tracking, and transaction history logging.</li>
+        <li>Implemented secure backend validation for customer transactions and integrated SQL database schemas to handle ACID-compliant financial operations.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <div class="project-title">Smart Recruitment Enterprise Platform</div>
+      <span class="project-stack">React · Firebase · Supabase · React Router</span>
+      <ul>
+        <li>Developed a production-grade interface featuring a secure glassmorphic authentication gateway using Firebase Auth.</li>
+        <li>Built a responsive UI with dynamic React Router pathing and a multi-language fallback matrix supporting English, French, Hindi, and Tamil.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <div class="project-title">Smart Veterinary Management System</div>
+      <span class="project-stack">React · FastAPI · Supabase · Python · OpenCV</span>
+      <ul>
+        <li>Developed a healthcare platform enabling real-time animal patient check-ins and live database synchronization.</li>
+        <li>Structured secure cross-role cloud security profiles using Row-Level Security (RLS) in Supabase to enforce data isolation.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <div class="project-title">Government Land Records Encroachment Monitoring</div>
+      <span class="project-stack">GIS Tools · Python · Satellite Imagery</span>
+      <ul>
+        <li>Developed a GIS-based land record management system designed to detect unauthorized property encroachments.</li>
+        <li>Integrated automated workflow alerts to cross-reference boundary data with official government registry datasets.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec-title">Internship Experience</h2>
+    <div class="job-item">
+      <div>
+        <div class="inst">Trinax — Full Stack Web Development Intern</div>
+        <div class="degree">Gained hands-on experience building scalable web applications using React.js for modern frontends and Python for robust server logic. Collaborated on designing RESTful APIs, integrating database models, and optimizing client-side performance for business components.</div>
+      </div>
+      <div class="loc-date">Remote<br>July 2026</div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec-title">Certificates</h2>
+    <ul class="cert-list">
+      <li><span>IBM Data Fundamentals Certification — IBM</span><span class="cert-date">Jul 2026</span></li>
+      <li><span>UI/UX Design Certification — Novi Tech</span><span class="cert-date">Aug 2025</span></li>
+      <li><span>Dr. Kalam Young Achiever Award — Participant Recognition</span><span class="cert-date">Sep 2025</span></li>
+      <li><span>Python Core &amp; Full-Stack Web Dev — Infosys Springboard</span><span class="cert-date">2024</span></li>
+      <li><span>JavaScript Bootcamp Certificate — LetsGarde</span><span class="cert-date">May 2024</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="sec-title">Languages</h2>
+    <div class="lang-row">
+      <span><b>Tamil</b> <span class="level">Native</span></span>
+      <span><b>English</b> <span class="level">Professional</span></span>
+      <span><b>Telugu</b> <span class="level">Conversational</span></span>
+    </div>
+  </section>
+
+  <footer class="decl">
+    I hereby declare that all the information provided above is true, complete, and correct to the best of my knowledge and belief.
+  </footer>
+
+</div>
+</body>
+</html>
